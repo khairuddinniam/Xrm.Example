@@ -30,15 +30,15 @@ namespace Xrm.Example.CrmSvcUtilEarlyBound.Plugins
 
         protected override void ExecuteCrmPlugin(IPluginContext<ins_salesorderline> context)
         {
-            //var messageName = context.PluginExecutionContext.MessageName;
-            //if (messageName == "Create" || messageName == "Update")
-            //{
-            //    var target = context.Target;
-            //    if (target.ContainsAny(e => e.ins_totalprice))
-            //    {
-            //        new CalculateTotalPrice(context).Execute();
-            //    }
-            //}
+            var messageName = context.PluginExecutionContext.MessageName;
+            if (messageName == "Create" || messageName == "Update")
+            {
+                var target = context.Target;
+                if (target.ContainsAny(e => e.ins_totalprice))
+                {
+                    new CalculateTotalPrice(context).Execute();
+                }
+            }
         }
     }
 }
