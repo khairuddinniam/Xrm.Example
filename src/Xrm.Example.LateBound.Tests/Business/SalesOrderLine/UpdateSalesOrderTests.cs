@@ -62,7 +62,7 @@ namespace Xrm.Example.LateBound.Tests.Business.SalesOrderLine
 
             var updateSalesOrder = testEvent.FakedContext
                 .CreateQuery("ins_salesorder")
-                .FirstOrDefault();
+                .First();
 
             Assert.Equal(1500m, updateSalesOrder.Get<Money>("ins_totalprice").Value);
         }
@@ -117,7 +117,7 @@ namespace Xrm.Example.LateBound.Tests.Business.SalesOrderLine
 
             var updateSalesOrder = testEvent.FakedContext
                 .CreateQuery("ins_salesorder")
-                .FirstOrDefault();
+                .First();
 
             Assert.Equal(1000m, updateSalesOrder.Get<Money>("ins_totalprice").Value);
         }

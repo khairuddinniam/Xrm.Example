@@ -63,7 +63,7 @@ namespace Xrm.Example.CustomEarlyBound.Tests.Business.SalesOrderLine
 
             var updateSalesOrder = testEvent.FakedContext
                 .CreateQuery<ins_salesorder>()
-                .FirstOrDefault();
+                .First();
 
             Assert.Equal(1500m, updateSalesOrder.Get(e => e.ins_totalprice).Value);
         }
@@ -119,7 +119,7 @@ namespace Xrm.Example.CustomEarlyBound.Tests.Business.SalesOrderLine
 
             var updateSalesOrder = testEvent.FakedContext
                 .CreateQuery<ins_salesorder>()
-                .FirstOrDefault();
+                .First();
 
             Assert.Equal(1000m, updateSalesOrder.Get(e => e.ins_totalprice).Value);
         }

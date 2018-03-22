@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="8.2.0.2" />
-    <PackageReference Include="Niam.XRM.Framework" Version="7.1.0.3" />
+    <PackageReference Include="Niam.XRM.Framework" Version="7.1.0.4" />
   </ItemGroup>
 
   <ItemGroup>
